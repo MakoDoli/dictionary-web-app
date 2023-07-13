@@ -9,10 +9,11 @@ export const HeaderMenu = styled.div<{ mode: boolean }>`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  position: relative;
   h2 {
     color: ${(props) => (props.mode ? "white" : "#2d2d2d")};
     text-align: right;
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -42,4 +43,22 @@ export const ToggleButton = styled.div`
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
+`;
+export const Modal = styled.div<{ mode: boolean }>`
+  width: 100px;
+  height: 82px;
+  background-color: ${(props) => (props.mode ? "#1F1F1F" : "white")};
+  position: absolute;
+  box-shadow: 0px 5px 30px 0px #a445ed;
+  border-radius: 16px;
+  top: 50px;
+  right: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  h2:hover {
+    color: #a445ed;
+  }
 `;

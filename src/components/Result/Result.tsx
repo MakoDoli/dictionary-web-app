@@ -47,8 +47,10 @@ export default function Result(props: Props) {
       </Noun>
       <Meaning>Meaning</Meaning>
       <ul>
-        {nounMeanings?.map((elem) => (
-          <Text mode={theme}>{elem.definition}</Text>
+        {nounMeanings?.map((elem, index) => (
+          <Text key={index} mode={theme}>
+            {elem.definition}
+          </Text>
         ))}
       </ul>
 
@@ -64,8 +66,10 @@ export default function Result(props: Props) {
       </Noun>
       <Meaning>Meaning</Meaning>
       <ul>
-        {verbMeanings?.map((elem) => (
-          <Text mode={theme}>{elem.definition}</Text>
+        {verbMeanings?.map((elem, index) => (
+          <Text key={index} mode={theme}>
+            {elem.definition}
+          </Text>
         ))}
       </ul>
       <Source mode={theme}>

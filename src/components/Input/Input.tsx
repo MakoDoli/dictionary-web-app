@@ -20,6 +20,11 @@ export default function Input(props: Props) {
         onChange={(e) => setWord(e.target.value)}
         onFocus={() => setBorderLIne(true)}
         onBlur={() => setBorderLIne(false)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            props.handleSearch();
+          }
+        }}
       />
       <img onClick={props.handleSearch} src={search} alt="search" />
     </StyledSearch>

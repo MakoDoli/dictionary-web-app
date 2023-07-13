@@ -12,7 +12,7 @@ export const StyledWordcontainer = styled.div`
 `;
 export const StyledWord = styled.div<{ mode: boolean }>`
   h1 {
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +22,7 @@ export const StyledWord = styled.div<{ mode: boolean }>`
   h3 {
     color: #a445ed;
     /* Body M - Sans */
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -32,7 +32,7 @@ export const StyledWord = styled.div<{ mode: boolean }>`
 
 export const Noun = styled.div<{ mode: boolean }>`
   color: ${(props) => (props.mode ? "white" : "#2d2d2d")};
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 18px;
   font-style: italic;
   font-weight: 700;
@@ -43,7 +43,7 @@ export const Noun = styled.div<{ mode: boolean }>`
   margin-top: 29px;
   h4 {
     color: ${(props) => (props.mode ? "white" : "#2d2d2d")};
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 18px;
     font-style: italic;
     font-weight: 700;
@@ -58,7 +58,7 @@ export const NounLine = styled.div<{ mode: boolean }>`
 
 export const Meaning = styled.div`
   color: #757575;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -68,7 +68,7 @@ export const Meaning = styled.div`
 
 export const Text = styled.li<{ mode: boolean }>`
   color: ${(props) => (props.mode ? "white" : "#2d2d2d")};
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -78,16 +78,17 @@ export const Text = styled.li<{ mode: boolean }>`
 `;
 export const Synonym = styled.div`
   color: #a445ed;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-top: 31px;
+  cursor: pointer;
 `;
 export const Example = styled.p`
   color: #757575;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -100,7 +101,7 @@ export const Source = styled.div<{ mode: boolean }>`
   color: #757575;
   display: flex;
   gap: 20px;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

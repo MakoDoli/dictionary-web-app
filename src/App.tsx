@@ -7,12 +7,14 @@ import Input from "./components/Input/Input";
 import Result from "./components/Result/Result";
 import axios from "axios";
 import { DataType } from "./components/Result/DataType";
+import ErrorMessage from "./components/Error/ErrorMessage";
 
 function App() {
   const [theme, setTheme] = useState(true);
   const [word, setWord] = useState<string | undefined>("keyboard");
   const [wordInfo, setWordInfo] = useState<DataType | undefined>();
-  // let wordInfo: DataType;
+  const [error, setError] = useState(false);
+  const [fontType, setFontType] = useState("Inter");
 
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${
     word ? word : ""
@@ -27,10 +29,8 @@ function App() {
 
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       setWordInfo(data[0]);
-
-      console.log(wordInfo);
     } catch {
-      console.error(Error);
+      setError(true);
     }
   };
 
@@ -42,9 +42,9 @@ function App() {
 
   return (
     <Main mode={theme}>
-      <GlobalStyles />
+      <GlobalStyles family={fontType} />
 
-      <Header theme={theme} setTheme={setTheme} />
+      <Header theme={theme} setTheme={setTheme} setfont={setFontType} />
       <Input
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
         handleSearch={searchWord}
@@ -52,7 +52,11 @@ function App() {
         word={word}
         setWord={setWord}
       />
-      <Result info={wordInfo} theme={theme} setWord={setWord} />
+      {error ? (
+        <ErrorMessage theme={theme} />
+      ) : (
+        <Result info={wordInfo} theme={theme} setWord={setWord} />
+      )}
     </Main>
   );
 }
