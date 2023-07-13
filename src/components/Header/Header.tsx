@@ -19,7 +19,9 @@ interface Props {
 export default function Header(props: Props) {
   const { theme, setTheme, setfont } = props;
   const [showModal, setShowModa] = useState(false);
-
+  window.addEventListener("click", (e) => {
+    if ((e.target as Element).tagName !== "IMG") setShowModa(false);
+  });
   return (
     <StyledHeader>
       <img src={logo} alt="logo" />

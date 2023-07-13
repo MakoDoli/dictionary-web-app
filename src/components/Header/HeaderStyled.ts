@@ -49,7 +49,7 @@ export const Modal = styled.div<{ mode: boolean }>`
   height: 82px;
   background-color: ${(props) => (props.mode ? "#1F1F1F" : "white")};
   position: absolute;
-  box-shadow: 0px 5px 30px 0px #a445ed;
+  box-shadow: 0px 4px 20px 0px #a445ed;
   border-radius: 16px;
   top: 50px;
   right: 130px;
